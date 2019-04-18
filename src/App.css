@@ -1,0 +1,127 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 10vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -999;
+}
+
+.content-video {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.spiner {
+  margin: auto;
+}
+
+.container-blocks {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+}
+
+.col {
+    display: inline-block;
+    width: 33%;
+    margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.card {
+  border: 1px solid #fff;
+  padding: 20px;
+  margin: 10px;
+  max-width: 30%;
+  min-width: 300px;
+}
+
+.card p {
+  text-align: justify;
+}
+.icon {
+  padding: 5px;
+}
+
+.icon-branch::before {
+  display: block;
+  content: "";
+  background-image: url(./img/branch.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  width: 20px;
+  height: 20px;
+  clear: both;
+}
+
+.icon-type::before {
+  display: block;
+  content: "";
+  background-image: url(./img/type.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  width: 20px;
+  height: 20px;
+  clear: both;
+}
+
+.avatar-photo {
+  max-height: 25px;
+  border-radius: 50%;
+}
+
+.menu-button {
+  position: absolute;
+  z-index: 9999;
+  top: 10px;
+  right: 30px;
+  background: transparent !important;
+
+}
+
+.userMenu-close {
+  
+  float: right;
+
+}
