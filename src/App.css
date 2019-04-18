@@ -1,3 +1,9 @@
+/* General Styles */
+
+a {
+  text-decoration: none;
+}
+
 .App {
   text-align: center; 
 } 
@@ -12,30 +18,52 @@
 
 .content-video {
   position: fixed;
-  top: 0;
+  top: 0px;
   width: 100%;
   height: 100%;
   flex-grow: 1;
 }
 
-.spiner {
-  margin: auto;
+/*Menu */
+.TopMenu-Avatar {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 9999;
 }
 
-.container-blocks {
-  position: relative;
-  width: 100%;
+.avatar-photo {
+  max-height: 25px;
+  border-radius: 50%;
 }
+
+.menu-button {
+  z-index: 999;
+  background: transparent !important;
+}
+
+.userMenu-close {
+  float: right;
+}
+
+.mdl-button {
+  position: static !important;
+}
+
+/* HOME */
+
 
 .Home-Login-Menu {
   margin: auto;
-  width: 75%;
+  width: 100%;
   border: 1px solid green;
+  max-width: 600px;
 }
 
-a {
-  text-decoration: none;
-}
+
+
+
+/* MainPage */
 
 .card-container {
   width: 90%;
@@ -83,18 +111,3 @@ a {
   clear: both;
 }
 
-.avatar-photo {
-  max-height: 25px;
-  border-radius: 50%;
-}
-
-.menu-button {
-  z-index: 9999;
-  background: transparent !important;
-}
-
-.userMenu-close {
-  
-  float: right;
-
-}

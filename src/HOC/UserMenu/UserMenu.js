@@ -8,6 +8,7 @@ import GeneralStyleButton from '../../Theme/GeneralStyleButton';
 import Avatar from '../Avatar/Avatar';
 import { useStateValue } from '../../State/State';
 import LogOut from './LogOut';
+import AddResearchCard from '../AddResearchCard/AddResearchCard'
 
 
 const style = <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css' />
@@ -30,6 +31,8 @@ function UserMenu() {
       <Modal.Content>
         <button className="userMenu-close" onClick={() => setOpen(false)}>Close x </button>
         <h1> User Menu </h1>
+    <AddResearchCard/>
+    <br/>
         <p>
         { user.providerId ? user.displayName  : "Login"  }
       </p>
@@ -40,7 +43,7 @@ function UserMenu() {
         <p> Choose Style </p>
         <GeneralStyleButton />
         <br></br>
-        <p> Github repository </p>
+        <p> <a href="https://github.com/martinrebo/tinkar" target="_blank" rel="noopener noreferrer"> Github repository </a>  </p>
 
       </Modal.Content>
 

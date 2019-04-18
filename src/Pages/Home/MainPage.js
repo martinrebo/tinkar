@@ -24,8 +24,9 @@ export default function MainPage() {
 
     return (
         <>
-            <div className="content-video" style={{ color: theme.primary, background: theme.background }} >
-                <p> mainpage {dataCard.length} Research Cards   </p>
+            <div style={{ color: theme.primary, background: theme.background }} >
+                <p> Mainpage {dataCard.length} Research Cards   </p>
+                <div className="card-container"> 
                 {dataCard.map((dataCard, index) => {
                     return <CardResearch key={index}
                         title={dataCard.title}
@@ -37,6 +38,7 @@ export default function MainPage() {
                     />
                 })}
 
+            </div>
             </div>
 
         </>

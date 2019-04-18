@@ -21,6 +21,7 @@ function Home() {
 
                 {/* <button id="myBtn" onClick={handleClick()}>Pause</button> */}
                 <div className=" Home-Login-Menu">
+                <br/>
                 { user.providerId ? <MainPage/> : <LoginPage/> } 
                 </div>
             </div> 
