@@ -1,12 +1,13 @@
 import firebase from 'firebase'
+import firebaseui from 'firebaseui';
 
 var config = {
-    apiKey: "AIzaSyAsFV6oddVNePcYl-hSuzBf70_ciJw-bfU",
-    projectId: "lab-33",
-    authDomain: "lab-33.firebaseapp.com",
-    databaseURL: "https://lab-33.firebaseio.com",
-    storageBucket: "lab-33.appspot.com",
-    messagingSenderId: "1035791625247"
+  apiKey: "AIzaSyCU93OJV41wvEHNAKXCprOjSpiFk2vKwUI",
+  authDomain: "tinkar-tk.firebaseapp.com",
+  databaseURL: "https://tinkar-tk.firebaseio.com",
+  projectId: "tinkar-tk",
+  storageBucket: "tinkar-tk.appspot.com",
+  messagingSenderId: "74474789177"
   };
 
 
@@ -17,6 +18,7 @@ var config = {
  export var fire = firebase.firestore();
  export var fireAuth = firebase;
  export var firebaseApp = firebase;
+ export var firebaseuiApp = firebaseui;
 
  
 

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Button from '@bit/semantic-org.semantic-ui-react.button'
 // // import Header from '@bit/semantic-org.semantic-ui-react.header'
 // import { Header } from 'semantic-ui-react'
-import Icon from '@bit/semantic-org.semantic-ui-react.icon'
 import Modal from '@bit/semantic-org.semantic-ui-react.modal'
 import LoginLogic from './LoginLogic';
 import GeneralStyleButton from '../../Theme/GeneralStyleButton';

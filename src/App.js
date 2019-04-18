@@ -5,6 +5,7 @@ import RouterApp from './Router/RouterApp';
 import VideoBackground from './Components/VideoBackground/VideoBackground';
 import UserMenu from './HOC/UserMenu/UserMenu';
 import { fireAuth } from './fire';
+import TopMenu from './Components/TopMenu/TopMenu';
 
 
 
@@ -61,7 +62,6 @@ function App(props) {
   return (
     <StateProvider initialState={initialState} reducer={reducer}>
       <VideoBackground />
-      <UserMenu />
       <RouterApp />
     </StateProvider>
   )

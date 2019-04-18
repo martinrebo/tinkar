@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import {fireAuth} from '../../fire';
+import {fireAuth, firebaseuiApp} from '../../fire';
 import { useStateValue } from '../../State/State';
 
 
@@ -19,7 +19,8 @@ export default function LoginLogic() {
     // We will display Google and Facebook as auth providers.
     signInOptions: [
       fireAuth.auth.GoogleAuthProvider.PROVIDER_ID,
-      fireAuth.auth.FacebookAuthProvider.PROVIDER_ID
+      fireAuth.auth.FacebookAuthProvider.PROVIDER_ID,
+      firebaseuiApp.auth.AnonymousAuthProvider.PROVIDER_ID
     ],
     callbacks: {
       signInSuccessWithAuthResult: () => false
@@ -38,8 +39,8 @@ useEffect(()=> {
 
 
     return (
-        <>
+        <div>
        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={fireAuth.auth()}/>
-        </>
+        </div>
     )
 }
