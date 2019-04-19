@@ -25,6 +25,31 @@ a {
   /* background-color: rgba(10, 10, 255, 0.7); */
 }
 
+/* Add a black background color to the top navigation */
+.topMenu {
+height: 5vh;
+}
+
+/* Style the links inside the navigation bar */
+.topmenu-link{
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border: 1px solid transparent;
+}
+
+/* Change the color of links on hover */
+.topmenu-link:hover {
+  font-weight: bold;;
+}
+
+.clear {
+  clear: both;
+}
+
+
 /*Menu */
 .TopMenu-Avatar {
   position: absolute;
@@ -57,7 +82,6 @@ a {
 .Home-Login-Menu {
   margin: auto;
   width: 100%;
-  max-width: 600px;
 }
 
 /* MainPage */
@@ -65,46 +89,57 @@ a {
 .card-container {
   /* width: 90%; */
   width: 100%;
-  height: 100%;
   margin: auto;
-
 }
-
 
 .card {
   border: 1px solid #fff;
   padding: 20px;
   margin: 10px auto;
- width: 350px;
-height: 500px;
+  width: 95vw;
 /* z-index: 999; */
+
 }
 
-.card-footer {
-  position: fixed;
-  bottom: 20px;
-width: 300px;
+.card-top {
+  height: 4vh;
 }
+.card-title {
+  height: 10vh;
+  overflow: hidden;
+}
+.card-description {
+height: 33vh;
+overflow: hidden;
+
+}
+.card-type {
+  line-height: 2em;
+  font-size: 1em;
+  height: 5vh;
+  overflow: hidden;
+}
+.card-footer {
+  height: 10vh;
+}
+
+.card-branch {
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 2em;
+  font-size: 1.1em;
+  }
 
 .card-button {
 border-radius: 50%;
 padding: 10px;
 background-color: transparent;
-}
-.float-right {
-  float: right;
-}
-.float-left {
-  float: left;
+margin: 0px 20px
 }
 
 .card-emoji-admin {
 background: transparent;
 }
-.card-description {
-  height: 250px;
-}
-
 
 .card p {
   text-align: justify;
@@ -113,17 +148,9 @@ background: transparent;
   padding: 5px;
   float: left;
 }
-.card-branch {
-font-weight: bold;
-text-transform: capitalize;
-line-height: 2em;
-font-size: 1.1em;
-}
 
-.card-type {
-  line-height: 2em;
-  font-size: 1em;
-}
+
+
 
 .icon-branch::before {
   display: block;
@@ -147,5 +174,36 @@ font-size: 1.1em;
   width: 20px;
   height: 20px;
   clear: both;
+}
+
+.float-right{
+  float: right;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .card p {
+    font-size: 1.2em;
+  }
+  .card-title h3 {
+    font-size: 2em;
+
+  }
+  .card-title {
+    height: 15vh;
+  }
+
+  .card-container {
+    /* width: 90%; */
+    width: 100%;
+    margin: auto;
+    max-width: 500px;
+  }
+  
+  .card {
+    width: 90%;
+  /* z-index: 999; */
+  }
+
 }
 
