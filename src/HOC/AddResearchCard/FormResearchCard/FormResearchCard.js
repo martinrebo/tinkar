@@ -61,13 +61,13 @@ export default function FormResearchCard() {
 
   return (
     <form onSubmit={(e) => { sendData(e) }}>
-      <input className="inputForm" type="text" placeholder="Title" required minLength="3" maxLength="140"
+      <textarea className="inputTextArea" rows="2" type="text" placeholder="Title | Max Length 65" required minLength="3" maxLength="65"
         value={title} onChange={(e) => {
           e.preventDefault();
           setTitle(e.target.value)
         }
         } />
-      <input className="inputForm" type="text" placeholder="Description" required minLength="10" maxLength="300"
+      <textarea className="inputTextArea" type="text" rows="3" placeholder="Description | Max Length 300" required minLength="5" maxLength="300"
         value={description} onChange={(e) => {
           e.preventDefault();
           setDescription(e.target.value)
@@ -78,9 +78,6 @@ export default function FormResearchCard() {
           setLink(e.target.value)
         }} />
 
-
-
-      <hr />
       <p className="paragraph"> Branch of Knowledge: </p>
       <label>
         <input className="inputRadio" type="radio" name="branch" value="business" checked={branch === "business"}
@@ -106,9 +103,9 @@ export default function FormResearchCard() {
 
 
 
-<p className="paragraph"> Type of Card: </p>
+<p className="paragraph"> Tag the type of Card: </p>
 
-<input className="inputForm" type="text" placeholder="Keyword tags" required minLength="1" maxLength="50"
+<input className="inputForm" type="text" placeholder="Keyword tags - max length: 50" required minLength="1" maxLength="50"
         value={type} onChange={(e) => {
           e.preventDefault();
           setType(e.target.value)

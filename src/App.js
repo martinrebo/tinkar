@@ -15,8 +15,10 @@ function App(props) {
 
   const initialState = {
     theme: {
-      primary: "white",
-      background: "transparent"
+      primary: "black",
+      secondary: "white",
+      background: "rgba(255,255,255,0.5)",
+      cardBack: "rgba(255,255,255,0.8)"
     },
     user: {
       displayName: 'Login',

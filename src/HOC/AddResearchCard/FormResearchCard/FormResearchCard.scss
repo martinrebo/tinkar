@@ -7,11 +7,25 @@
     border-top: none;
     border-right: none;
     border-left: none;
-display: block;
+    display: block;
     padding: 4px;
-    margin: 50px !important;
-    width: 70%;
+    margin: 30px 10px !important;
+    width: 90%;
     color: #fff;
+}
+
+.inputTextArea {
+    background-color: transparent;
+    border-width: 1px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    display: block;
+    padding: 4px;
+    margin: 40px 10px !important;
+    width: 90%;
+    color: #fff;
+
 }
 
 .inputRadio {
@@ -34,5 +48,5 @@ display: block;
 }
 
 .paragraph {
-    margin: 15px 0px 1px 0px;
+    margin: 15px 0px 10px 0px;
 }

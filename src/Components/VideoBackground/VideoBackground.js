@@ -1,5 +1,5 @@
 import React from 'react'
-import video from "../../img/Cieling_Flames_4K_Motion_Background_Loop (1).mp4"
+import video from "../../img/Smoke-4383.mp4"
 
 
 export default function VideoBackground(props) {

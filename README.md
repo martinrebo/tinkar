@@ -12,3 +12,7 @@ https://codesandbox.io/embed/j0y0vpz59
 
 https://github.com/oliviertassinari/react-swipeable-views
 
+https://pixabay.com/videos/abstract-blue-wave-background-12902/
+
+https://pixabay.com/videos/smoke-smokey-cloud-blue-intro-4383/
+

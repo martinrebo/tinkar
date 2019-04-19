@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useStateValue } from '../../State/State';
 import CardResearch from '../../Components/Card/CardResearch';
 import { fire } from '../../fire';
-import SwipeableViews from 'react-swipeable-views';
+import Slider from "react-slick";
 
 
 export default function MainPage() {
@@ -19,6 +19,7 @@ export default function MainPage() {
                         return documentSnapshot.data();
                     });
                     setDataCard(data);
+                    console.log( data);
                 })
     }, []);
 
@@ -28,14 +29,11 @@ export default function MainPage() {
 
     return (
         <>
-            <div style={{ color: theme.primary, background: theme.background }} >
-                <p> Mainpage {dataCard.length} Research Cards   </p>
                 <div className="card-container ">
                     <div id="root-deck-card">
-<SwipeableViews enableMouseEvents resistance="true"> 
+<Slider lazyLoad="progressive" > 
                                 {dataCard.map((dataCard, index) => {
                                     return (
-                                    <div> 
                                     <CardResearch key={index}
                                         title={dataCard.title}
                                         description={dataCard.description}
@@ -43,15 +41,17 @@ export default function MainPage() {
                                         branch={dataCard.branch}
                                         type={dataCard.type}
                                         style={{ color: theme.primary }}
+                                        background={theme.cardBack}
+                                        border={theme.primary}
+                                        
                                     />
-                                    </div>
+
                                     )
                                 })}
-</SwipeableViews>
+</Slider>
                     </div>
 
                 </div>
-            </div>
 
         </>
     )
