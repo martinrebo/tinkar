@@ -8,3 +8,7 @@ https://www.freepik.com/free-vector/memphis-pattern_1177561.htm
 
 
 https://codesandbox.io/embed/j0y0vpz59
+
+
+https://github.com/oliviertassinari/react-swipeable-views
+
