@@ -3,6 +3,7 @@ import { useStateValue } from '../../State/State';
 import CardResearch from '../../Components/Card/CardResearch';
 import { fire } from '../../fire';
 import Slider from "react-slick";
+import { relative } from 'path';
 
 
 export default function MainPage() {
@@ -19,7 +20,7 @@ export default function MainPage() {
                         return documentSnapshot.data();
                     });
                     setDataCard(data);
-                    console.log( data);
+                    console.log(data);
                 })
     }, []);
 
@@ -29,11 +30,12 @@ export default function MainPage() {
 
     return (
         <>
-                <div className="card-container ">
-                    <div id="root-deck-card">
-<Slider lazyLoad="progressive" > 
-                                {dataCard.map((dataCard, index) => {
-                                    return (
+            <div className="card-container ">
+                <div id="root-deck-card">
+                    <Slider lazyLoad="progressive">
+                        {dataCard.map((dataCard, index) => {
+                            return (
+                                <>
                                     <CardResearch key={index}
                                         title={dataCard.title}
                                         description={dataCard.description}
@@ -43,15 +45,15 @@ export default function MainPage() {
                                         style={{ color: theme.primary }}
                                         background={theme.cardBack}
                                         border={theme.primary}
-                                        
                                     />
 
-                                    )
-                                })}
-</Slider>
-                    </div>
-
+                                </>
+                            )
+                        })}
+                    </Slider>
                 </div>
+
+            </div>
 
         </>
     )
