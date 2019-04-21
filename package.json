@@ -1,6 +1,6 @@
 {
   "name": "gamelab33",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@bit/mui-org.material-ui.card": "^3.9.2",

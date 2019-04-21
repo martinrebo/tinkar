@@ -22,7 +22,7 @@ function App(props) {
     },
     user: {
       displayName: 'Login',
-      photoURL: 'https://api.adorable.io/avatars/285/abott@adorable.png'
+      photoURL: 'https://api.adorable.io/avatars/50/abott@adorable.png'
     }
   }
 

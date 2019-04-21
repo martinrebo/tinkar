@@ -4,9 +4,10 @@ import UserMenu from '../../HOC/UserMenu/UserMenu';
 export default function LoginPage() {
     return(
         <>
-        <h1> Tinker </h1>
-        <p> Tinder for reading cards</p>
+        <h1> Tinkar </h1>
+        <p> Tinder style reading cards</p>
         <p> Business | Tech | Health </p>
+        <p> <a href="https://github.com/martinrebo/tinkar">GitHub Repo </a></p>
         <UserMenu/>
         </>
     )

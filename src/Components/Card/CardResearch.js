@@ -33,7 +33,7 @@ export default function CardResearch(props) {
             <p className="card-type"> <span className="icon icon-type" /> {props.type}</p>
             <div className="card-footer">
                 <hr />
-                <button className="card-button" > <span className="card-span-emoji" role="img" aria-label="Discard"> ❌ </span>  </button>
+                <button className="card-button"  onClick={(e) => handleClick(e)} > <span className="card-span-emoji" role="img" aria-label="Discard"> ❌ </span>  </button>
                 
                 <a href={props.link} target="_blank" rel="noopener noreferrer" >
                     <button className="card-button"> <span className="card-span-emoji" role="img" aria-label="See Text">  👁️ </span>  </button> </a>

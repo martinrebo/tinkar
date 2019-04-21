@@ -56,11 +56,18 @@ height: 5vh;
   top: 5px;
   right: 5px;
   z-index: 999;
+
+  
 }
 
 .avatar-photo {
-  max-height: 25px;
+  height: 30px;
   border-radius: 50%;
+  border: 1px solid black;
+  min-height: 30px;
+  min-width: 30px;
+  background-image: url('https://api.adorable.io/avatars/285/abott@adorable.png');
+  background-size: contain;
 }
 
 .menu-button {
