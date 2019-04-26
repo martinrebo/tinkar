@@ -40,6 +40,12 @@ export default function FormResearchCard() {
         - Branch: ${data.branch}
         - Type: ${data.type}
         `)
+fire.collection('card').doc(docRef.id).update({
+  docid: docRef.id,
+})
+.then( console.log("[FormResearchCard] updateCardId "+ docRef.id ))
+.catch( function (error) {console.error('[FormResearchCard] error: ', error)})
+
         setTitle("");
         setDescription("");
         setLink("");

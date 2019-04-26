@@ -9,8 +9,7 @@ import { relative } from 'path';
 export default function MainPage() {
 
 
-    const [dataCard, setDataCard] = useState([])
-
+    const [dataCard, setDataCard] = useState([]);
     useEffect(() => {
 
         fire.collection('card').orderBy("created", "desc")
@@ -23,6 +22,7 @@ export default function MainPage() {
                     console.log(data);
                 })
     }, []);
+
 
 
     const [{ theme }, dispatch] = useStateValue();
