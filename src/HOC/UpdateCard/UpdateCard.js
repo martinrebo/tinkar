@@ -48,7 +48,7 @@ export default function UpdateCard(props) {
           It can be :
           You need to be Logged in to be able to Add Cards.
           You only can modify your own cards
-           
+          [UpdateCard]
          ${error} `)
             }
         );
@@ -63,7 +63,7 @@ export default function UpdateCard(props) {
 
 
                 <Form onSubmit={(e) => updateData(e)}>
-                    <Form.Group inline label="Branch">
+                    <Form.Group inline>
                     
                         <Form.Field>
                             <Radio

@@ -30,6 +30,7 @@ export default function FormResearchCard() {
       type: data.type,
       tags: data.tags,
       uid: user.uid,
+      likes: 0,
       userName: user.displayName,
       created: firebaseApp.firestore.Timestamp.fromDate(new Date())
     }).then(
@@ -122,7 +123,7 @@ fire.collection('card').doc(docRef.id).update({
         <input className="inputForm" type="text" placeholder="Keyword tags - max length: 50" required minLength="1" maxLength="50"
         value={tags} onChange={(e) => {
           e.preventDefault();
-          setType(e.target.value)
+          setTags(e.target.value)
         }} />
 
       <button type="submit" className="submit"> Submit Card </button>

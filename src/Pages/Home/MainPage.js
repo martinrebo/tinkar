@@ -47,6 +47,7 @@ export default function MainPage() {
                                         background={theme.cardBack}
                                         border={theme.primary}
                                         id={dataCard.docid}
+                                        likes={dataCard.likes}
                                     />
 
                                 </>
