@@ -42,9 +42,11 @@ export default function MainPage() {
                                         link={dataCard.link}
                                         branch={dataCard.branch}
                                         type={dataCard.type}
+                                        tags={dataCard.tags}
                                         style={{ color: theme.primary }}
                                         background={theme.cardBack}
                                         border={theme.primary}
+                                        id={dataCard.docid}
                                     />
 
                                 </>

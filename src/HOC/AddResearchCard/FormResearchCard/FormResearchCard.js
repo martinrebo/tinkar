@@ -12,10 +12,11 @@ export default function FormResearchCard() {
   const [link, setLink] = useState("");
   const [branch, setBranch] = useState("");
   const [type, setType] = useState("");
+  const [tags, setTags] = useState("");
 
   console.log(user.uid );
 
-  let data = { title, description, link, branch, type,};
+  let data = { title, description, link, branch, type, tags};
 
 
   function sendData(e) {
@@ -27,6 +28,7 @@ export default function FormResearchCard() {
       link: data.link,
       branch: data.branch,
       type: data.type,
+      tags: data.tags,
       uid: user.uid,
       userName: user.displayName,
       created: firebaseApp.firestore.Timestamp.fromDate(new Date())
@@ -51,6 +53,7 @@ fire.collection('card').doc(docRef.id).update({
         setLink("");
         setBranch("");
         setType("");
+        setTags("");
 
       }
     ).catch(
@@ -111,8 +114,13 @@ fire.collection('card').doc(docRef.id).update({
 
 <p className="paragraph"> Tag the type of Card: </p>
 
-<input className="inputForm" type="text" placeholder="Keyword tags - max length: 50" required minLength="1" maxLength="50"
+<input className="inputForm" type="text" placeholder="Type - max length: 50" required minLength="1" maxLength="50"
         value={type} onChange={(e) => {
+          e.preventDefault();
+          setType(e.target.value)
+        }} />
+        <input className="inputForm" type="text" placeholder="Keyword tags - max length: 50" required minLength="1" maxLength="50"
+        value={tags} onChange={(e) => {
           e.preventDefault();
           setType(e.target.value)
         }} />

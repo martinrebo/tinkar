@@ -1,6 +1,6 @@
 import React from 'react';
-
-
+import { Modal, Button, Form } from 'semantic-ui-react'
+import UpdateCard from '../../HOC/UpdateCard/UpdateCard';
 
 
 export default function CardResearch(props) {
@@ -12,14 +12,20 @@ export default function CardResearch(props) {
     }
 
 
-
     return (
         <div className="card" style={{ background: props.background, borderColor: props.border }}>
             <div className="card-top">
-                <span className="card-emoji-admin float-right" role="img" aria-label="Save Card" onClick={(e) => handleClick(e)}> ⚙️ </span>
+
+                <Modal trigger={<Button circular icon="settings" floated="right" basic></Button>} closeIcon >
+                    <Modal.Description >
+                        <UpdateCard {...props} />
+                    </Modal.Description>
+
+                </Modal>
+
                 <p className="card-branch"> <span className="icon icon-branch" />  {props.branch}</p>
             </div>
-<hr/>
+            <hr />
             <div className="card-title">
                 <h3>{props.title}</h3>
             </div>
@@ -33,12 +39,14 @@ export default function CardResearch(props) {
             <p className="card-type"> <span className="icon icon-type" /> {props.type}</p>
             <div className="card-footer">
                 <hr />
-                <button className="card-button"  onClick={(e) => handleClick(e)} > <span className="card-span-emoji" role="img" aria-label="Discard"> ❌ </span>  </button>
-                
+                <button className="card-button" onClick={(e) => handleClick(e)} > <span className="card-span-emoji" role="img" aria-label="Discard"> ❌ </span>  </button>
+
                 <a href={props.link} target="_blank" rel="noopener noreferrer" >
                     <button className="card-button"> <span className="card-span-emoji" role="img" aria-label="See Text">  👁️ </span>  </button> </a>
                 <button className="card-button" onClick={(e) => handleClick(e)} > <span className="card-span-emoji" role="img" aria-label="Save Card"> ✔️ </span> </button>
             </div>
+
         </div>
+
     )
 }

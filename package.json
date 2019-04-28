@@ -20,6 +20,7 @@
     "react-spring": "^8.0.19",
     "react-swipeable-views": "^0.13.1",
     "react-with-gesture": "^4.0.8",
+    "semantic-ui-react": "^0.86.0",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
