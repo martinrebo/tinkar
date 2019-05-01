@@ -1,15 +1,8 @@
 import React, {useState} from 'react'
-import Button from '@bit/semantic-org.semantic-ui-react.button'
-// // import Header from '@bit/semantic-org.semantic-ui-react.header'
-// import { Header } from 'semantic-ui-react'
-import Icon from '@bit/semantic-org.semantic-ui-react.icon'
-import Modal from '@bit/semantic-org.semantic-ui-react.modal'
 import FormResearchCard from './FormResearchCard/FormResearchCard';
+import {Modal, Button} from 'semantic-ui-react';
 
-
-const style = <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css'/>
-
-function AddResearchCard() { 
+export default function AddResearchCard() { 
 
   const [open, setOpen] = useState(false)
 
@@ -32,4 +25,3 @@ onClose={ () => setOpen(false)}
   </Modal>
   )};
 
-export default () => (<div> {style} <AddResearchCard/></div>)
