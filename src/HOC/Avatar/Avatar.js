@@ -7,6 +7,9 @@ export default function Avatar(props) {
 
     const [{ user, theme }, dispatch] = useStateValue();
 
+    let fullname = user.displayName;
+    let arrayname = fullname.split( ' ' );
+    let name = arrayname[0];
 
     useEffect(()=> {
         fireAuth.auth().onAuthStateChanged(function (user) {
@@ -22,7 +25,7 @@ export default function Avatar(props) {
     return(
         <div className="avatar-menu">
         <img className="avatar-photo " src={user.photoURL} alt=""></img>
-        <p style={ {color: theme.primary }} > {user.displayName} </p>
+        <p style={ {color: theme.primary }} > {name} </p>
         
         </div>
     )

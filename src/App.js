@@ -17,8 +17,8 @@ function App(props) {
     theme: {
       primary: "black",
       secondary: "white",
-      background: "rgba(255,255,255,0.5)",
-      cardBack: "rgba(255,255,255,0.8)"
+      background: "rgb(245,245,245)",
+      cardBack: "rgb(255,255,255,)"
     },
     user: {
       displayName: 'Login',
@@ -63,7 +63,7 @@ function App(props) {
 
   return (
     <StateProvider initialState={initialState} reducer={reducer}>
-      <VideoBackground />
+      {/* <VideoBackground /> */}
       <RouterApp />
     </StateProvider>
   )

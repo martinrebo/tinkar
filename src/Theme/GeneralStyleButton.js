@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStateValue } from '../State/State';
-import './GeneralSytleButton.scss';
+import {Button } from 'semantic-ui-react';
 
 export default function GeneralStyleButton() {
 
@@ -9,24 +9,18 @@ export default function GeneralStyleButton() {
     return (
         <>  
         <div className="GeneralStyleButton">
-            <button style={{ color: "black", background:"white" }} value="light"
+            <Button className="light-theme"  value="light"
                 onClick={() => dispatch({
                     type: 'changeTheme',
                     newTheme: 
-                    { primary: 'black', background: "rgba(255,255,255,0.8)",  cardBack: "rgba(255,255,255,0.9)" }
-                })}>Light</button>
-            <button style={{ color: "white", background: "black"  }} value="dark"
+                    { primary: 'black', background: "rgb(245,245,245)",  cardBack: "rgb(255,255,255)" }
+                })}>Light</Button>
+            <Button inverted value="dark"
                 onClick={() => dispatch({
                     type: 'changeTheme',
                     newTheme:
-                     { primary: 'white',  background: "rgba(0,0,0,0.5)", cardBack: "rgba(0,0,0,0.8)"}
-                })}>Dark</button>
-            <button style={{ color: "black", background:"white"}} value="default"
-                onClick={() => dispatch({
-                    type: 'changeTheme',
-                    newTheme:
-                     { primary: 'black', background: "rgba(255,255,255,0.4)", cardBack: "rgba(255,255,255,0.6)"  }
-                })}>Default</button>
+                     { primary: 'white',  background: "rgb(20,20,20)", cardBack: "rgb(0,0,0)"}
+                })}>Dark</Button>
         </div>
         </>
     )

@@ -17,7 +17,7 @@ export default function LikeCard(props) {
             updated: firebaseApp.firestore.Timestamp.fromDate(new Date())
         }).then(
             function () {
-                alert(`You Liked your card:
+                console.log(`You Liked your card:
           - Likes on database: ${likes+1}  `)
             }
         ).catch(
@@ -35,7 +35,7 @@ export default function LikeCard(props) {
 
     return (
         <>
-            <Button color="red" content="Like" icon="heart" inverted floated="right"
+            <Button color="red" content="Like Me" icon="heart" inverted floated="right"
                 label={{ basic: true, color: 'red', pointing: 'left', content: likes }}
                 onClick={(e) => {
                     e.preventDefault();

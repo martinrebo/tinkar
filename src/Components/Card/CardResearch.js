@@ -5,13 +5,6 @@ import LikeCard from '../../HOC/LikeCard/LikeCard';
 
 
 export default function CardResearch(props) {
-    function handleClick(e) {
-        e.preventDefault();
-        alert(`Thanks for click here!
-        👷 We are working on it :) 
-        ` + props.title);
-    }
-
 
     return (
         <Card fluid className="card" style={{ background: props.background, borderColor: props.border }} >
@@ -21,7 +14,7 @@ export default function CardResearch(props) {
                     <Label as="a" floated="left" basic color="teal">
                         <Icon name="sitemap" /> {props.branch}
                     </Label>
-                    <Modal trigger={<Button circular icon="settings" floated="right" basic></Button>} closeIcon >
+                    <Modal trigger={<Button circular icon="settings" floated="right"></Button>} closeIcon >
                         <Modal.Description >
                             <UpdateCard {...props} />
                         </Modal.Description>
@@ -43,10 +36,11 @@ export default function CardResearch(props) {
                 <p className="card-type"> <span className="icon icon-type" /> {props.type}</p>
             </Card.Content>
             <Card.Content className="card-footer">
-                        <Icon link circular  name="eye" size="large" color="green" inverted >
-                            <a href={props.link}> </a>
-                        </Icon>
-                    <LikeCard {...props} />
+                <a href={props.link} target="_blank" rel="noopener noreferrer" >
+                    <Icon link circular name="eye" size="large" color="green" inverted title={props.link}>
+                    </Icon>
+                </a>
+                <LikeCard {...props} />
 
             </Card.Content>
 

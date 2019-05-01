@@ -6,6 +6,7 @@ a {
 
 .App {
   text-align: center; 
+  
 } 
 #myVideo {
   position: fixed;
@@ -187,6 +188,11 @@ background: transparent;
 }
 
 /* Slick Carrousel */
+
+.slick-next, .slick-prev {
+  background-color: black;
+  border-radius: 50%;
+}
 
 
 @media only screen and (min-width: 600px) {
