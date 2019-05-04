@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStateValue } from '../../State/State';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import UserMenu from '../../HOC/UserMenu/UserMenu'
+import UserMenu from '../../Components/UserMenu/UserMenu'
 
 
 function TopMenu() {

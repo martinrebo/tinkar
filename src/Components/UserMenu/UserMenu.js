@@ -42,7 +42,7 @@ export default function UserMenu() {
         <GeneralStyleButton />
         <br></br>
         <p> <a href="https://github.com/martinrebo/tinkar" target="_blank" rel="noopener noreferrer">
-          <Icon link size="large" color="white" name="github" /> Github repository </a>  </p>
+          <Icon link size="large" color="teal" name="github" /> Github repository </a>  </p>
         <br />
 
 

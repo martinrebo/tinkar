@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './FormResearchCard.scss';
-import {fire, firebaseApp } from '../../../fire';
-import { useStateValue } from '../../../State/State';
+import {fire, firebaseApp } from '../../fire';
+import { useStateValue } from '../../State/State';
 
 export default function FormResearchCard() {
 

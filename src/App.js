@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StateProvider } from './State/State';
 import './App.css';
 import RouterApp from './Router/RouterApp';
-import VideoBackground from './Components/VideoBackground/VideoBackground';
-import UserMenu from './HOC/UserMenu/UserMenu';
 import { fireAuth } from './fire';
-import TopMenu from './Components/TopMenu/TopMenu';
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, Button, Card, Label, Icon } from 'semantic-ui-react'
-import UpdateCard from '../../HOC/UpdateCard/UpdateCard';
-import LikeCard from '../../HOC/LikeCard/LikeCard';
+import UpdateCard from '../UpdateCard/UpdateCard';
+import LikeCard from '../LikeCard/LikeCard';
 
 
 export default function CardResearch(props) {

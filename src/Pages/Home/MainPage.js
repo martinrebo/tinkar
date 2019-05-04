@@ -35,8 +35,8 @@ export default function MainPage() {
                     <Slider lazyLoad="progressive">
                         {dataCard.map((dataCard, index) => {
                             return (
-                                <>
-                                    <CardResearch key={index}
+                                <div key={index}>
+                                    <CardResearch 
                                         title={dataCard.title}
                                         description={dataCard.description}
                                         link={dataCard.link}
@@ -50,7 +50,7 @@ export default function MainPage() {
                                         likes={dataCard.likes}
                                     />
 
-                                </>
+                                </div>
                             )
                         })}
                     </Slider>

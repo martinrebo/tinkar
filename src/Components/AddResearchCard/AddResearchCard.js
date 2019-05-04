@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import FormResearchCard from './FormResearchCard/FormResearchCard';
+import FormResearchCard from '../FormResearchCard/FormResearchCard';
 import {Modal, Button} from 'semantic-ui-react';
 
 export default function AddResearchCard() { 

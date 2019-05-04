@@ -3,7 +3,6 @@ import { useStateValue } from '../../State/State';
 
 import TopMenu from '../../Components/TopMenu/TopMenu';
 import MainPage from './MainPage';
-import UserMenu from '../../HOC/UserMenu/UserMenu';
 import LoginPage from './LoginPage';
 
 

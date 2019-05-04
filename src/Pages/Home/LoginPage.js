@@ -1,5 +1,5 @@
 import React from 'react'
-import UserMenu from '../../HOC/UserMenu/UserMenu';
+import UserMenu from '../../Components/UserMenu/UserMenu';
 
 export default function LoginPage() {
     return(
