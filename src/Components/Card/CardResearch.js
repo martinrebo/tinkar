@@ -11,8 +11,8 @@ export default function CardResearch(props) {
             <Card.Content>
                 <Card.Header className="card-top">
 
-                    <Label as="a" floated="left" basic color="teal">
-                        <Icon name="sitemap" /> {props.branch}
+                    <Label  basic color="teal">
+                        <Icon floated="left" name="sitemap" /> {props.branch}
                     </Label>
                     <Modal trigger={<Button circular icon="settings" floated="right"></Button>} closeIcon >
                         <Modal.Description >

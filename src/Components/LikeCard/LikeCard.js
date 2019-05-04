@@ -35,14 +35,6 @@ export default function LikeCard(props) {
 
     return (
         <>
-            {/* <Button color="red" content="Like Me" icon="heart" inverted floated="right"
-                label={{ basic: true, color: 'red', pointing: 'left', content: likes }}
-                onClick={(e) => {
-                    e.preventDefault();
-                    setLikes(likes + 1);
-                    likeCard();
-                }}> </Button> */}
-
             <Button as="div" labelPosition='right' floated="right" onClick={(e) => {
                 e.preventDefault();
                 setLikes(likes + 1);

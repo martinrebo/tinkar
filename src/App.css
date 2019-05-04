@@ -71,18 +71,18 @@ height: 5vh;
   background-size: contain;
 }
 
-.menu-button {
+ .menu-button {
   z-index: 999;
   background: transparent !important;
 }
 
 .userMenu-close {
   float: right;
-}
+} 
 
 .mdl-button {
   position: static !important;
-}
+} 
 
 /* HOME */
 
