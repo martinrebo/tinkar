@@ -7,6 +7,7 @@ import LogOut from './LogOut';
 // import AddResearchCard from '../AddResearchCard/AddResearchCard'
 import SuggestCard from '../AddResearchCard/SuggestCard'
 import { Button, Modal, Icon, Divider, Card } from 'semantic-ui-react';
+import CardMenu from '../CardMenu/CardMenu';
 
 
 
@@ -45,6 +46,8 @@ export default function UserMenu() {
           <GeneralStyleButton />
           <br></br>
           <Divider />
+          <CardMenu/>
+          <Divider/>
           <p> <a href="https://github.com/martinrebo/tinkar" target="_blank" rel="noopener noreferrer">
             <Icon link size="large" color="teal" name="github" /> Github repository </a>  </p>
           <br />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SuggestCardForm from '../FormResearchCard/SuggestCardForm';
+import SuggestCardForm from '../CardForm/CardFormSuggest';
 import { Modal, Button, Icon } from 'semantic-ui-react';
 
 export default function AddResearchCard() {

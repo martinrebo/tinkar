@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useStateValue } from '../../State/State';
-import CardResearch from '../../Components/Card/CardResearch';
+import CardView from '../../Components/Card/CardView';
 import { fire } from '../../fire';
 import Slider from "react-slick";
 import { relative } from 'path';
@@ -36,7 +36,7 @@ export default function MainPage() {
                         {dataCard.map((dataCard, index) => {
                             return (
                                 <div key={index}>
-                                    <CardResearch 
+                                    <CardView
                                         title={dataCard.title}
                                         description={dataCard.description}
                                         link={dataCard.link}

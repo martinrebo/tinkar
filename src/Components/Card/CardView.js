@@ -1,27 +1,13 @@
 import React from 'react';
 import { Modal, Button, Card, Label, Icon } from 'semantic-ui-react'
-import UpdateCard from '../UpdateCard/UpdateCard';
-import LikeCard from '../LikeCard/LikeCard';
+// import UpdateCard from '../UpdateCard/UpdateCard';
+import LikeCard from '../CardLike/LikeCard';
 
 
-export default function CardResearch(props) {
+export default function CardView(props) {
 
     return (
         <Card fluid className="card" style={{ background: props.background, borderColor: props.border }} >
-            <Card.Content>
-                <Card.Header className="card-top">
-
-                    <Label  basic color="teal">
-                        <Icon floated="left" name="sitemap" /> {props.branch}
-                    </Label>
-                    <Modal trigger={<Button circular icon="settings" floated="right"></Button>} closeIcon >
-                        <Modal.Description >
-                            <UpdateCard {...props} />
-                        </Modal.Description>
-                    </Modal>
-                </Card.Header>
-
-            </Card.Content>
             <Card.Content>
                 <div className="card-title">
                     <h3>{props.title}</h3>
