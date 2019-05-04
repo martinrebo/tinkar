@@ -94,30 +94,31 @@ height: 5vh;
 
 /* MainPage */
 
-.card-container {
-  /* width: 90%; */
+/* .card-container {
+  
   width: 100%;
   margin: auto;
-}
+} */
 
-.card {
+/* .card {
   border: 1px solid #fff;
   padding: 20px;
   margin: 10px auto;
   width: 95vw;
-/* z-index: 999; */
 
-}
+} */
 
-.card-top {
-  height: 4vh;
-}
+
 .card-title {
-  height: 10vh;
+  max-height: 10vh;
   overflow: hidden;
+  line-height: 1.5em;
+  min-height: 6em;
 }
 .card-description {
-height: 33vh;
+line-height: 1em;
+min-height: 15em;
+max-height: 70vh;
 overflow: hidden;
 
 }
@@ -128,7 +129,7 @@ overflow: hidden;
   overflow: hidden;
 }
 .card-footer {
-  height: 10vh;
+  height: 15vh;
 }
 
 .card-branch {

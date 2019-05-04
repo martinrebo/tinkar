@@ -3,7 +3,7 @@ import './FormResearchCard.scss';
 import {fire, firebaseApp } from '../../fire';
 import { useStateValue } from '../../State/State';
 
-export default function FormResearchCard() {
+export default function CardFormAdd() {
 
   const [{ user }, dispatch] = useStateValue();
 
