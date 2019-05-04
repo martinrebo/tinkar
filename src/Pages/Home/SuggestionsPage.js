@@ -2,11 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useStateValue } from '../../State/State';
 // import CardView from '../../Components/Card/CardView';
 import { fire } from '../../fire';
-import Slider from "react-slick";
 import { relative } from 'path';
-import CardSuggestions from '../../Components/Card/CardSuggestions';
-import Avatar from '../../Components/Avatar/Avatar';
-import TopMenu from '../../Components/TopMenu/TopMenu';
 import { Table, Container } from 'semantic-ui-react';
 import EditSuggestions from '../Back/EditSuggestions'
 import DeleteSuggestion from '../Back/DeleteSuggestion';
@@ -35,8 +31,7 @@ export default function SuggestionsPage() {
 
 
     return (
-        <>
-            <TopMenu></TopMenu>      
+        <>    
             <Container>
                     
                 <p> Suggestions </p>

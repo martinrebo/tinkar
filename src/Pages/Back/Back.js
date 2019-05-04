@@ -2,8 +2,8 @@ import React from 'react';
 import { useStateValue } from '../../State/State';
 
 import TopMenu from '../../Components/TopMenu/TopMenu';
-import SuggestionsPage from './SuggestionsPage';
-import LoginPage from './LoginPage';
+import SuggestionsPage from '../Home/SuggestionsPage';
+import LoginPage from '../Home/LoginPage';
 
 
 
@@ -18,10 +18,10 @@ function Suggestions() {
             <TopMenu/>
             <br></br>   
 
-                {/* <button id="myBtn" onClick={handleClick()}>Pause</button> */}
+                {console.log( user)}
                 <div className=" Home-Login-Menu">
                 <br/>
-                { user.providerId ? <SuggestionsPage/> : <LoginPage/> } 
+                {  user.uid === "3kyT6ZtqB4ca36WnkpkLDVVYqG63"  ? <SuggestionsPage/> : <LoginPage/> } 
                 </div>
             </div> 
             <div className="container-blocks">
