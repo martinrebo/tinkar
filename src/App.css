@@ -110,25 +110,26 @@ height: 5vh;
 
 
 .card-title {
-  max-height: 10vh;
   overflow: hidden;
-  line-height: 1.5em;
-  min-height: 6em;
+  line-height: 1em;
+  height: 3em;
 }
 .card-description {
 line-height: 1em;
-min-height: 15em;
-max-height: 70vh;
+min-height: 5em;
+height: 35vh;
 overflow: hidden;
 
 }
 .card-type {
   line-height: 2em;
   font-size: 1em;
-  height: 5vh;
+  height: 10vh ;
   overflow: hidden;
 }
 .card-footer {
+  line-height: 1em;
+  font-size: 1em;
   height: 15vh;
 }
 
@@ -152,9 +153,6 @@ background: transparent;
 
 .card p {
   text-align: justify;
-}
-.icon {
-  float: left;
 }
 
 

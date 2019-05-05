@@ -12,7 +12,7 @@ export default function LikeCard(props) {
     }, [])
 
     function likeCard() {
-        fire.collection('card').doc(props.id).update({
+        fire.collection('card').doc(props.docid).update({
             likes: likes + 1,
             updated: firebaseApp.firestore.Timestamp.fromDate(new Date())
         }).then(
@@ -35,18 +35,11 @@ export default function LikeCard(props) {
 
     return (
         <>
-            <Button as="div" labelPosition='right' floated="right" onClick={(e) => {
+            <Button as="div" floated="right" circular icon="heart" color="red" onClick={(e) => {
                 e.preventDefault();
                 setLikes(likes + 1);
                 likeCard();
             }}  >
-                <Button  inverted color='red'>
-                    <Icon name='heart' />
-                    Like
-      </Button>
-                <Label as='a' basic color='red' pointing='left'>
-                    {likes}
-                </Label>
             </Button>
 
 

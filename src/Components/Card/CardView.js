@@ -1,36 +1,127 @@
 import React from 'react';
-import { Modal, Button, Card, Label, Icon } from 'semantic-ui-react'
+import { Modal, Button, Card, Label, Icon, Container, Segment, Header } from 'semantic-ui-react'
 // import UpdateCard from '../UpdateCard/UpdateCard';
 import LikeCard from '../CardLike/LikeCard';
 
 
 export default function CardView(props) {
 
+    let mediaSwitch = props.media;
+    let iconMediaName, textMedia;
+
+    switch (mediaSwitch) {
+        case "audio":
+            iconMediaName = "volume up";
+            textMedia = "Audio"
+            break;
+        case "text":
+            iconMediaName = "book";
+            textMedia = "Text"
+            break;
+        case "code":
+            iconMediaName = "code";
+            textMedia = "code"
+            break;
+        case "Live":
+            iconMediaName = "calendar alternate outline";
+            textMedia = "Event"
+            break;
+        case "video":
+            iconMediaName = "volume up";
+            textMedia = "Video"
+            break;
+        case "mix":
+            iconMediaName = "mixcloud"
+            textMedia = "Mix media";
+            break;
+        default:
+            iconMediaName = "other"
+            textMedia = "Mix media";;
+    }
+
     return (
-        <Card fluid className="card" style={{ background: props.background, borderColor: props.border }} >
-            <Card.Content>
-                <div className="card-title">
-                    <h3>{props.title}</h3>
-                </div>
+        <Container fluid>
+            <Segment raised>
+                <Card fluid className="card" style={{ background: props.background, borderColor: props.border }}  >
+                    <Card.Content>
+                        <Label horizontal>
+                            <Icon name="clock outline" />
+                            {props.duration}
+                        </Label>
+                        <Label horizontal>
+                            <Icon name="heart" color="red" />
+                            {props.likes}
+                        </Label>
+                        <div className="card-title">
+                            <h3>{props.title}</h3>
+                        </div>
+                        <div className="card-description">
+                            <p> {props.description}</p>
+                        </div>
+                    </Card.Content>
+                    <Card.Content className="card-type">
+                        <Label as='a' title="Media">
+                            <Icon name={iconMediaName} />
+                            {textMedia}
+                        </Label>
+                        <Label as='a'>
+                            <Icon name="comment alternate outline" />
+                            {props.mediaType}
+                        </Label>
+                    </Card.Content>
+                    <Card.Content className="card-footer">
+                    <a href={props.link} target="_blank" rel="noopener noreferrer" >
+                    <Button as="div"  circular icon="eye" color="green"  title={props.link} size="large" floated="left" >
+                    </Button>
+                    </a>
 
-                <div className="card-description">
-                    <p> {props.description}</p>
-                </div>
 
-                <p> {props.test}</p>
-                <hr />
-                <p className="card-type"> <span className="icon icon-type" /> {props.type}</p>
-            </Card.Content>
-            <Card.Content className="card-footer">
-                <a href={props.link} target="_blank" rel="noopener noreferrer" >
-                    <Icon link circular name="eye" size="large" color="green" inverted title={props.link}>
-                    </Icon>
-                </a>
-                <LikeCard {...props} />
 
-            </Card.Content>
+                        <Modal trigger={<Button icon="info" circular/>}>
+                            <Modal.Header>Card Infor</Modal.Header>
+                            <Modal.Content>
+                                <Modal.Description>
+                                    <Header>{props.title}</Header>
+                                    <Label as='a' title="Media">
+                                        <Icon name={iconMediaName} />
+                                        {textMedia}
+                                    </Label>
+                                    <Label as='a'>
+                                        <Icon name="comment alternate outline" />
+                                        {props.mediaType}
+                                    </Label>
+                                    <Label as='a'>
+                                        <Icon name="terminal" />
+                                        {props.position}
+                                    </Label>
+                                    <Label as='a'>
+                                        <Icon name="react" />
+                                        {props.eco}
+                                    </Label>
 
-        </Card>
+                                    <Label as='a'>
+                                        <Icon name="tag" />
+                                        {props.tags}
+                                    </Label>
+
+                                </Modal.Description>
+                                <Modal.Description>
+                                    <ul>
+                                        <li>Document ID {props.docid}</li>
+                                        <li> Created at: {props.created}</li>
+                                        <li> Created by: {props.name}</li>
+                                    </ul>
+                                </Modal.Description>
+                            </Modal.Content>
+                        </Modal>
+
+                        <LikeCard {...props} />
+
+                    </Card.Content>
+
+                </Card>
+            </Segment>
+        </Container>
 
     )
 }

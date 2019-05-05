@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
-import FormResearchCard from '../FormResearchCard/FormResearchCard';
+import React, {useState} from 'react';
 import {Modal, Button} from 'semantic-ui-react';
+import CardFormAdd from '../CardForm/CardFormAdd';
 
 export default function AddResearchCard() { 
 
@@ -18,7 +18,7 @@ onClose={ () => setOpen(false)}
         Add Research Card
       </p>
       <button onClick={()=>setOpen(false)}>Close x </button>
-      <FormResearchCard /> 
+     <CardFormAdd/>
        
     </Modal.Content>
 

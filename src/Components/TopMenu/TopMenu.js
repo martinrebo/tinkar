@@ -11,7 +11,7 @@ function TopMenu() {
         <div className="topMenu">
 
             <nav>
-                <Link to="/" className="topmenu-link" style={ {color: theme.primary}}>Tinkar 0.4.0 </Link>
+                <Link to="/" className="topmenu-link" style={ {color: theme.primary}}>Tinkar 0.5.0 </Link>
             </nav>
             <div className="TopMenu-Avatar">
             <UserMenu/> 

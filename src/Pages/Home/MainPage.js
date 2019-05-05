@@ -40,14 +40,20 @@ export default function MainPage() {
                                         title={dataCard.title}
                                         description={dataCard.description}
                                         link={dataCard.link}
-                                        branch={dataCard.branch}
-                                        type={dataCard.type}
+                                        media={dataCard.media}
+                                        mediaType={dataCard.mediaType}
+                                        position={dataCard.position}
+                                        eco = {dataCard.eco}
                                         tags={dataCard.tags}
+                                        duration = {dataCard.duration}
                                         style={{ color: theme.primary }}
                                         background={theme.cardBack}
                                         border={theme.primary}
-                                        id={dataCard.docid}
+                                        docid={dataCard.docid}
                                         likes={dataCard.likes}
+                                        uid={dataCard.uid}
+                                        username={dataCard.userName}
+                                        created={dataCard.created}
                                     />
 
                                 </div>
