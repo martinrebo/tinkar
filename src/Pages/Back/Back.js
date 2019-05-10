@@ -5,6 +5,7 @@ import TopMenu from '../../Components/TopMenu/TopMenu';
 import SuggestionsPage from '../Home/SuggestionsPage';
 import LoginPage from '../Home/LoginPage';
 import CardFormAdd from '../../Components/CardForm/CardFormAdd';
+import BackCardsView from './BackCardsView';
 
 
 
@@ -20,10 +21,11 @@ function Suggestions() {
             <br></br>   
                 <div className=" Home-Login-Menu">
 
-                <CardFormAdd/>
+                {/* <CardFormAdd/> */}
                 <br/>
                 {/* {  user.uid === "3kyT6ZtqB4ca36WnkpkLDVVYqG63"  ? <SuggestionsPage/> : <LoginPage/> }  */}
                 </div>
+                <BackCardsView/>
             </div> 
             <div className="container-blocks">
 
