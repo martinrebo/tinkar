@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 // import './FormResearchCard.scss';
-import { Form, Button, Icon, TextArea, Input, Container, Segment } from 'semantic-ui-react'
+import { Form, Button, TextArea, Input, Container } from 'semantic-ui-react'
 import { fire, firebaseApp } from '../../fire';
 import { useStateValue } from '../../State/State';
 
@@ -13,7 +13,7 @@ export default function FormResearchCard() {
   const [link, setLink] = useState("");
 
 
-  console.log(user.uid);
+  console.log(typeof(user.uid));
 
   let data = { title, description, link };
 
@@ -84,7 +84,8 @@ export default function FormResearchCard() {
 
         </Form.Field>
         <p>
-          <Button type="submit" floated="right">Suggest</Button>
+          {typeof user.uid == "string" ? <Button type="submit" floated="right">Suggest</Button> :  <Button disabled floated="right">You need to Login to send Suggestions </Button> }
+          
         </p>
         <br />
 

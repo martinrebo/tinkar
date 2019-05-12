@@ -1,6 +1,6 @@
 {
-  "name": "tinkar",
-  "version": "0.5.0",
+  "name": "escard",
+  "version": "0.6.0",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",

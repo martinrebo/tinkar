@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
-// import './FormResearchCard.scss';
+import React, { useState } from 'react'
 import { fire, firebaseApp } from '../../fire';
 import { useStateValue } from '../../State/State';
 import { Form, Container, TextArea, Input, Button, Checkbox } from 'semantic-ui-react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default function CardFormAdd() {
 

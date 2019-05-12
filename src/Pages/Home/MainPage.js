@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import { useStateValue } from '../../State/State';
 import CardView from '../../Components/Card/CardView';
 import { fire } from '../../fire';
 import Slider from "react-slick";
-import { relative } from 'path';
 
 
 export default function MainPage() {

@@ -11,7 +11,7 @@ function TopMenu() {
         <div className="topMenu">
 
             <nav>
-                <Link to="/" className="topmenu-link" style={ {color: theme.primary}}> <strong> ESCards </strong> 0.6.0 </Link>
+                <Link to="/" className="topmenu-link" style={ {color: theme.primary}}> <strong> ESCard </strong> </Link>
             </nav>
             <div className="TopMenu-Avatar">
             <UserMenu/> 
