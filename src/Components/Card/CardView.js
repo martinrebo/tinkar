@@ -77,8 +77,8 @@ export default function CardView(props) {
 
 
 
-                        <Modal trigger={<Button icon="info" circular/>}>
-                            <Modal.Header>Card Infor</Modal.Header>
+                        <Modal trigger={<Button icon="info" circular/>} closeIcon>
+                            <Modal.Header>Card Info</Modal.Header>
                             <Modal.Content>
                                 <Modal.Description>
                                     <Header>{props.title}</Header>
@@ -107,10 +107,13 @@ export default function CardView(props) {
                                 </Modal.Description>
                                 <Modal.Description>
                                     <ul>
-                                        <li>Document ID {props.docid}</li>
-                                        <li> Created at: {props.created}</li>
-                                        <li> Created by: {props.name}</li>
+                                        <li>Document ID: {props.docid}</li>
+                                        <li>Created at : {Date(props.created)} </li>
+                                        <li>Created by: {props.username}</li>
                                     </ul>
+
+                                    <p>Comming Soon: Filter Cards by Functionality</p>
+                                    <p>If you want to make a suggestion about this card use the Doc ID: <strong> {props.docid}  </strong> </p>
                                 </Modal.Description>
                             </Modal.Content>
                         </Modal>

@@ -5,22 +5,22 @@ import { useStateValue } from '../../State/State';
 import { Form, Container, TextArea, Input, Button, Checkbox } from 'semantic-ui-react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-export default function CardFormAdd() {
+export default function CardFormAdd(props) {
 
   const [{ user }, dispatch] = useStateValue();
 
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [link, setLink] = useState("");
-  const [tags, setTags] = useState(""); // 2019, Apollo, BillGates, OpenSource, etc... 
-  const [media, setMedia] = useState("mix"); // Audio, Video, Text, Code, Live, Misc
-  const [mediaType, setMediaType] = useState("misc"); // Blog, Podcast, Book, etcc
-  const [position, setPosition] = useState("cs"); // Frontend, Backend, Devops, Full
-  const [eco, setEco] = useState("other"); // React, Angular, Node, 
-  const [duration, setDuration] = useState(""); // 5m  Duration of the course / book / etcc
-  const [rookie, setRookie] = useState(false); // Rookie Friendy
-  const [must, setMust] = useState(false); // It is a must 
-  const [hard, setHard] = useState(false); // Complex Resource for pros *Devops, Redux, CS 
+  const [title, setTitle] = useState(props.title);
+  const [description, setDescription] = useState(props.description);
+  const [link, setLink] = useState(props.link);
+  const [tags, setTags] = useState(props.tags); // 2019, Apollo, BillGates, OpenSource, etc... 
+  const [media, setMedia] = useState(props.media); // Audio, Video, Text, Code, Live, Misc
+  const [mediaType, setMediaType] = useState(props.mediaType); // Blog, Podcast, Book, etcc
+  const [position, setPosition] = useState(props.position); // Frontend, Backend, Devops, Full
+  const [eco, setEco] = useState(props.eco); // React, Angular, Node, 
+  const [duration, setDuration] = useState(props.duration); // 5m  Duration of the course / book / etcc
+  const [rookie, setRookie] = useState(props.rookie); // Rookie Friendy
+  const [must, setMust] = useState(props.must); // It is a must 
+  const [hard, setHard] = useState(props.must); // Complex Resource for pros *Devops, Redux, CS 
 
 
   let data = { title, description, link, tags, media, mediaType, position, eco, duration, rookie, must, hard };
@@ -29,7 +29,7 @@ export default function CardFormAdd() {
   function sendData(e) {
     e.preventDefault();
     console.log(data);
-    fire.collection('card').add({
+    fire.collection('card').document(props.docid).update({
       title: data.title,
       description: data.description,
       link: data.link,
@@ -78,12 +78,6 @@ export default function CardFormAdd() {
         setMust(false);
         setHard(false);
 
-
-        fire.collection('card').doc(docRef.id).update({
-          docid: docRef.id,
-        })
-          .then(console.log("[CardFormAdd] updateCardId " + docRef.id))
-          .catch(function (error) { console.error('[CardFormAdd] error: ', error) })
       })
       .catch(
       function (error) {

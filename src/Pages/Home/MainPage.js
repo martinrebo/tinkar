@@ -19,7 +19,6 @@ export default function MainPage() {
                         return documentSnapshot.data();
                     });
                     setDataCard(data);
-                    console.log(data);
                 })
     }, []);
 

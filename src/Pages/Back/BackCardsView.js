@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Table, Container} from 'semantic-ui-react'
 import {fire} from '../../fire'
 import EditCard from './EditCard'
+import DeleteCard from './DeleteCard';
 
 
 
@@ -52,7 +53,7 @@ export default function BackCardsView() {
                                 <EditCard {...dataCard}/>
                             </Table.Cell>
                             <Table.Cell> 
-                                {/* <DeleteSuggestion {...dataCard}/> */}
+                                <DeleteCard {...dataCard}/>
                                  </Table.Cell>
                         </Table.Row>
 
