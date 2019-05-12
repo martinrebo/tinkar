@@ -129,11 +129,12 @@ export default function CardFormAdd() {
   ]
 
   const optionsEco = [
-    { key: 'r', text: 'React', value: 'react' },
-    { key: 'a', text: 'Angular', value: 'angular' },
-    { key: 'n', text: 'Node', value: 'node' },
-    { key: 'e', text: 'Express', value: 'express' },
-    { key: 'm', text: 'Mongo', value: 'mongo' },
+    { key: 'r', text: 'React (MERN)', value: 'react' },
+    { key: 'a', text: 'Angular (MEAN)', value: 'angular' },
+    { key: 'a', text: 'Vue (MEVN)', value: 'angular' },
+    { key: 'n', text: 'Node only', value: 'node' },
+    { key: 'e', text: 'Express only', value: 'express' },
+    { key: 'm', text: 'Mongo only', value: 'mongo' },
     { key: 'o', text: 'Other', value: 'other' },
   ]
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button, Card, Label, Icon, Container, Segment, Header } from 'semantic-ui-react'
+import { Modal, Button, Card, Label, Icon, Container, Segment, Header, Divider } from 'semantic-ui-react'
 // import UpdateCard from '../UpdateCard/UpdateCard';
 import LikeCard from '../CardLike/LikeCard';
 
@@ -52,6 +52,7 @@ export default function CardView(props) {
                             <Icon name="heart" color="red" />
                             {props.likes}
                         </Label>
+                        <Divider/> 
                         <div className="card-title">
                             <h3>{props.title}</h3>
                         </div>
