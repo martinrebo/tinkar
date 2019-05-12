@@ -22,7 +22,6 @@ export default function EditSuggestions(props) {
     const [hard, setHard] = useState(false); // Complex Resource for pros *Devops, Redux, CS 
 
 
-
     let data = { title, description, link, tags, media, mediaType, position, eco, duration, rookie, must, hard };
 
 
@@ -43,28 +42,46 @@ export default function EditSuggestions(props) {
             must: data.must,
             hard: data.hard,
             suggested: props.uid,
+            created: props.created,
             updated: firebaseApp.firestore.Timestamp.fromDate(new Date())
         }).then(
-            function () {
-                alert(`You Add a new suggested card your card:
+            function (docRef) {
+                alert(`You Add a new suggested card:
           - Title: ${data.title} 
           - Description: ${data.link}
           - Link: ${data.link}
           `)
+                setTitle("");
+                setDescription("");
+                setLink("");
+                setMedia("mix");
+                setMediaType("misc");
+                setPosition("cs");
+                setEco("other");
+                setTags("");
+                setRookie(false);
+                setMust(false);
+                setHard(false);
 
-            }
-        ).catch(
-            function (error) {
-                console.error("Error updating document: ", error);
-                alert(`Error:
+
+                fire.collection('card').doc(docRef.id).update({
+                    docid: docRef.id,
+                })
+                    .then(console.log("[Edit Suggestions] updateCardId " + docRef.id))
+                    .catch(function (error) { console.error('[Edit Suggestions] error: ', error) })
+            })
+            .catch(
+                function (error) {
+                    console.error("Error updating document: ", error);
+                    alert(`Error:
           Oopps! Something went wrong.
           It can be :
           You need to be Logged in to be able to Add Cards.
           You only can modify your own cards
           [UpdateCard]
          ${error} `)
-            }
-        );
+                }
+            );
     }
 
     const optionsMedia = [
@@ -102,7 +119,7 @@ export default function EditSuggestions(props) {
     const optionsEco = [
         { key: 'r', text: 'React (MERN)', value: 'react' },
         { key: 'a', text: 'Angular (MEAN)', value: 'angular' },
-        { key: 'a', text: 'Vue (MEVN)', value: 'angular' },
+        { key: 'v', text: 'Vue (MEVN)', value: 'angular' },
         { key: 'n', text: 'Node only', value: 'node' },
         { key: 'e', text: 'Express only', value: 'express' },
         { key: 'm', text: 'Mongo only', value: 'mongo' },

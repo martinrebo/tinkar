@@ -23,7 +23,7 @@ export default function CardFormAdd() {
 
   let data = { title, description, link, tags, media, mediaType, position, eco, duration, rookie, must, hard };
 
- 
+
   function sendData(e) {
     e.preventDefault();
     console.log(data);
@@ -84,14 +84,14 @@ export default function CardFormAdd() {
           .catch(function (error) { console.error('[CardFormAdd] error: ', error) })
       })
       .catch(
-      function (error) {
-        console.error("Error adding document: ", error);
-        alert(`Error:
+        function (error) {
+          console.error("Error adding document: ", error);
+          alert(`Error:
         Oopps! Something went wrong.
         [CardFormAdd] 
        ${error} `)
-      }
-    );
+        }
+      );
   }
 
   const optionsMedia = [
@@ -129,7 +129,7 @@ export default function CardFormAdd() {
   const optionsEco = [
     { key: 'r', text: 'React (MERN)', value: 'react' },
     { key: 'a', text: 'Angular (MEAN)', value: 'angular' },
-    { key: 'a', text: 'Vue (MEVN)', value: 'angular' },
+    { key: 'v', text: 'Vue (MEVN)', value: 'angular' },
     { key: 'n', text: 'Node only', value: 'node' },
     { key: 'e', text: 'Express only', value: 'express' },
     { key: 'm', text: 'Mongo only', value: 'mongo' },
@@ -162,15 +162,15 @@ export default function CardFormAdd() {
             }} />
         </Form.Field>
         <Form.Group widths="equal">
-          <Form.Select label='Media used on the card'  options={optionsMedia} defaultValue={media}
+          <Form.Select label='Media used on the card' options={optionsMedia} defaultValue={media}
             onChange={(e, { value }) => {
               setMedia(value);
             }} />
-          <Form.Select label='Media Type'   options={optionsMediaType} defaultValue={mediaType}
+          <Form.Select label='Media Type' options={optionsMediaType} defaultValue={mediaType}
             onChange={(e, { value }) => {
               setMediaType(value);
             }} />
-          <Form.Select label='Position'   options={optionsPosition} defaultValue={position}
+          <Form.Select label='Position' options={optionsPosition} defaultValue={position}
             onChange={(e, { value }) => {
               setPosition(value);
             }} />
@@ -191,12 +191,12 @@ export default function CardFormAdd() {
         </Form.Group>
         <Form.Group widths="equal">
           <Form.Field>
-            <Checkbox label='Rookie Friendly' checked={rookie}  onClick={(e) => {
-              rookie ?  setRookie(false) : setRookie(true);
+            <Checkbox label='Rookie Friendly' checked={rookie} onClick={(e) => {
+              rookie ? setRookie(false) : setRookie(true);
             }} />
           </Form.Field>
           <Form.Field>
-            <Checkbox label='It is a must' checked={must}  onClick={(e) => {
+            <Checkbox label='It is a must' checked={must} onClick={(e) => {
               must ? setMust(false) : setMust(true)
             }} />
           </Form.Field>
