@@ -84,7 +84,7 @@ export default function FormResearchCard() {
 
         </Form.Field>
         <p>
-          {typeof user.uid == "string" ? <Button type="submit" floated="right">Suggest</Button> :  <Button disabled floated="right">You need to Login to send Suggestions </Button> }
+          { user.uid  ? <Button type="submit" floated="right">Suggest</Button> :  <Button disabled floated="right">You need to Login to send Suggestions </Button> }
           
         </p>
         <br />

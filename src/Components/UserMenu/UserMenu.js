@@ -18,8 +18,7 @@ export default function UserMenu() {
 
 
   return (
-    <Modal dimmer="blurring" basic closeIcon trigger={
-      <Button className="menu-button"> <Avatar /> </Button>}
+    <Modal dimmer="blurring" basic closeIcon trigger={  <Button className="menu-button"> <Avatar /> </Button>}
        >
       <Modal.Content>
           <Divider />
@@ -30,7 +29,7 @@ export default function UserMenu() {
 
           <Divider inverted />
           <p> Suggest Cards to add: </p>
-          <SuggestCard />
+          { user.displayName === "Login" ? <Button disabled>Suggest (Disabled) </Button> : <SuggestCard /> } 
           <Divider />
           <p> Choose Style </p>
           <GeneralStyleButton />
