@@ -43,7 +43,7 @@ export default function UserMenu() {
           <p> <a href="https://twitter.com/warteamx" target="_blank" rel="noopener noreferrer"> < Icon link name="twitter" color="teal">
           </Icon> Twitter </a>  </p>
           <Divider/>
-          <p> ESCard version 0.6.0 </p>
+          <p> ESCard version 0.6.5 </p>
 
 
       </Modal.Content>
