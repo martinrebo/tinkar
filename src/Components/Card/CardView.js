@@ -78,7 +78,7 @@ export default function CardView(props) {
 
 
 
-                        <Modal trigger={<Button icon="info" circular/>} closeIcon>
+                        <Modal trigger={<Button icon="info" color="facebook" circular/>} closeIcon>
                             <Modal.Header>Card Info</Modal.Header>
                             <Modal.Content>
                                 <Modal.Description>
