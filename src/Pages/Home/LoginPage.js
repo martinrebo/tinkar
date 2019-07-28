@@ -1,6 +1,6 @@
 import React from 'react'
 import UserMenu from '../../Components/UserMenu/UserMenu';
-import { Card, Container,} from 'semantic-ui-react';
+import { Card, Container} from 'semantic-ui-react';
 
 export default function LoginPage() {
     return (

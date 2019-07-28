@@ -19,7 +19,7 @@ export default function LoginLogic() {
     // We will display Google and Facebook as auth providers.
     signInOptions: [
       fireAuth.auth.GoogleAuthProvider.PROVIDER_ID,
-      fireAuth.auth.FacebookAuthProvider.PROVIDER_ID,
+      //fireAuth.auth.FacebookAuthProvider.PROVIDER_ID,
       firebaseuiApp.auth.AnonymousAuthProvider.PROVIDER_ID
     ]
   };
